@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/ -->
+<html lang="en-US"><input type="hidden" id="__yoroi_connector_api_injected_type" value="prod"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>NES Graphics – Part 1 | dustmop.io blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.dustmop.io/blog/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://www.dustmop.io/blog/wp-content/themes/duster/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="dustmop.io blog » Feed" href="http://www.dustmop.io/blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="dustmop.io blog » Comments Feed" href="http://www.dustmop.io/blog/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="dustmop.io blog » NES Graphics – Part 1 Comments Feed" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.dustmop.io\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.20"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./NES Graphics – Part 1 _ dustmop.io blog_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="duster-css" href="./NES Graphics – Part 1 _ dustmop.io blog_files/style.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="http://www.dustmop.io/blog/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.dustmop.io/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.dustmop.io/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Star Versus Official Trailer" href="http://www.dustmop.io/blog/2015/02/17/star-versus-official-trailer/">
+<link rel="next" title="Stupid NES Tricks – Screen Wrap Detection" href="http://www.dustmop.io/blog/2015/05/20/stupid-nes-tricks-screen-wrap-detection/">
+<meta name="generator" content="WordPress 4.9.20">
+<link rel="shortlink" href="http://www.dustmop.io/blog/?p=56">
+<link rel="alternate" type="application/json+oembed" href="http://www.dustmop.io/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.dustmop.io%2Fblog%2F2015%2F04%2F28%2Fnes-graphics-part-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.dustmop.io/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.dustmop.io%2Fblog%2F2015%2F04%2F28%2Fnes-graphics-part-1%2F&amp;format=xml">
+
+<!-- Easy WP Meta Description -->
+<meta name="description" content="Guide to the NES&#39;s graphics format. How backgrounds are made of 4 components - nametables, CHR, palettes, attributes.">
+<!-- /Easy WP Meta Description -->
+
+				<link rel="canonical" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-56 single-format-standard singular">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+<style>
+#top-ad {
+  padding-top: 10px;
+  text-align: center;
+  width: 728px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#searchform {
+  display: none;
+}
+</style>
+		<!--
+                        <div id="top-ad">
+<a href="http://starversus.com/" target="_blank"><img src="http://www.dustmop.io/blog/wp-content/uploads/2015/07/banner-ad-LEADERBOARD.png" width="728" height="90" class="alignnone" /></a>
+                        </div>
+-->
+
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://www.dustmop.io/blog/" title="dustmop.io blog" rel="home">dustmop.io blog</a></span></h1>
+				<h2 id="site-description"></h2>
+			</hgroup>
+
+			
+							<form method="get" id="searchform" action="http://www.dustmop.io/blog/">
+	<input type="text" class="field" name="s" id="s" placeholder="Search">
+	<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+			
+			<nav id="access" role="navigation">
+				<h1 class="section-heading">Main menu</h1>
+				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+				<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a href="http://dustmop.io/blog">Blog</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="http://dustmop.io/">Main</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a href="http://starversus.com/">Star Versus</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+<div id="primary">
+	<div id="content" role="main">
+
+		
+			<nav id="nav-single">
+				<h1 class="section-heading">Post navigation</h1>
+				<span class="nav-previous"><a href="http://www.dustmop.io/blog/2015/02/17/star-versus-official-trailer/" rel="prev">← Previous</a></span>
+				<span class="nav-next"><a href="http://www.dustmop.io/blog/2015/05/20/stupid-nes-tricks-screen-wrap-detection/" rel="next">Next →</a></span>
+			</nav><!-- #nav-single -->
+
+			
+<article id="post-56" class="post-56 post type-post status-publish format-standard hentry category-nes tag-graphics tag-makechr tag-nes">
+	<header class="entry-header">
+		<h1 class="entry-title">NES Graphics – Part 1</h1>
+
+		<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/" rel="bookmark"><time class="entry-date" datetime="2015-04-28T15:40:41+00:00" pubdate="">April 28, 2015</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.dustmop.io/blog/author/dustmop/" title="View all posts by dustmop">dustmop</a></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Released in 1983, the Nintendo Entertainment System (NES) home console was a cheap, yet capable machine that went on to achieve tremendous success. Using a custom designed Picture Processing Unit (PPU) for graphics, the system could produce visuals that were quite impressive at the time, and still hold up fairly well if viewed in the proper context. Of utmost importance was memory efficiency, creating graphics using as few bytes as possible. At the same time, however, the NES provided developers with powerful, easy to use features that helped set it apart from older home consoles. Understanding how NES graphics are made creates an appreciation for the technical prowess of the system, and provides contrast against how easy modern day game makers have it with today’s machines.</p>
+<p>The background graphics of the NES are built from four separate components, that when combined together produce the image you see on screen. Each component handles a separate aspect; color, position, raw pixel art, etc. This may seem  overly complex and cumbersome, but it ends up being much more memory efficient, and also enables simple effects with very little code. If you want to understand NES graphics, knowing these four components is key.</p>
+<p>This document assumes some familiarity with computer math, in particular the fact that 8 bits = 1 byte, 8 bits can represent 256 values, and how hexadecimal notation works. However, even those without a technical background can hopefully find it interesting.</p>
+<h1>OVERVIEW</h1>
+<p><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/castlevania.png" alt="castlevania" width="256" height="240" class="alignnone size-medium wp-image-48"></p>
+<p>Here is an image from the opening scene of Castlevania (1986), of the gates leading to the titular castle. This image is 256×240 pixels, and uses 10 different colors. To represent this image in memory we’d want to take advantage of this limited color palette, and save space by only storing the minimum amount of information. One naive approach could be using an indexed palette, with 4 bits for every pixel, fitting 2 pixels per byte. This requires 256*240/2 = 30720 bytes, but as you’ll soon see, the NES does much a better job.</p>
+<p><span id="more-56"></span></p>
+<p>Central to the topic of NES graphics are tiles and blocks <a href="#terminology">[1]</a>. A tile is an 8×8 region, while a block is 16×16, and each aligns to a grid of the same size. Once these grids are added, you may begin to see some of the underlying structure in the graphics. Here is the castle entrance with grid at x2 zoom.</p>
+<p style="line-height:0px;white-space:nowrap"><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/ruler-horiz.png" alt="ruler-horiz" width="535" height="16" class="alignnone wp-image-54" srcset="http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz.png 535w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz-300x9.png 300w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz-500x15.png 500w" sizes="(max-width: 535px) 100vw, 535px"><br><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/ruler-vert.png" alt="ruler-vert" width="23" height="480" class="alignnone wp-image-55" style="margin-top:0px"><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/castlevania-grid.png" alt="castlevania-grid" width="512" height="480" class="alignnone wp-image-45" style="margin-top:0px" srcset="http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-grid.png 512w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-grid-300x281.png 300w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-grid-500x469.png 500w" sizes="(max-width: 512px) 100vw, 512px"></p>
+<p>This grid uses light green for blocks and dark green for tiles. The rulers along the axis have hexadecimal values that can be added together to find position; for example the heart in the status bar is at $15+$60 = $75, which is 117 in decimal. Each screen has 16×15 blocks (240) and 32×30 tiles (960). Let’s dive into how this image is represented, starting with the raw pixel art.</p>
+<h1>CHR</h1>
+<p>CHR represents raw pixel art, without color or position, and is defined in terms of tiles. An entire memory page contains 256 tiles of CHR, and each tile has 2 bit depth. Here’s the heart:</p>
+<p><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/pixel-heart.png" alt="pixel-heart" width="128" height="128" class="alignnone size-full wp-image-53"></p>
+<p>And its CHR representation <a href="#chr-encoding">[2]</a>:</p>
+<p><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/pixel-heart-chr.png" alt="pixel-heart-chr" width="128" height="128" class="alignnone size-full wp-image-50"></p>
+<p>This representation takes 2 bits per pixel, so at a size of 8×8, that means 8*8*2 = 128 bits = 16 bytes. An entire page then takes 16*256 = 4096 bytes. Here’s all the CHR used by the castlevania image.</p>
+<p><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/castlevania-chr.png" alt="castlevania-chr" width="271" height="101" class="alignnone size-full wp-image-43"></p>
+<p>Recall that it takes 960 tiles to fill an image, but CHR only allows for 256. This means most of the tiles are repeated, on average 3.75 times, but more often than not a tiny number are used as the majority (such as a blank background, solid colors, or regular patterns). The castlevania image uses a lot of blank tiles, as well as solid blues. To see how tiles are assigned, we use nametables.</p>
+<h1>NAMETABLE</h1>
+<p>A nametable assigns a CHR tile to each position of the screen, of which there are 960. Each position uses a single byte, so the entire nametable takes up 960 bytes. The order of assignment is each row from left to right, top to bottom, and matches the calculated position found by adding the values from the rulers. So the upper-left-most position is $0, to the right of that is $1, and below it is $20.</p>
+<p>The values for the nametable depend upon the order in which the CHR is filled. Here’s one possibility <a href="#nametable-order">[3]</a>:</p>
+<p style="line-height:0px;white-space:nowrap;"><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/ruler-horiz.png" alt="ruler-horiz" width="535" height="16" class="alignnone wp-image-54" srcset="http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz.png 535w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz-300x9.png 300w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz-500x15.png 500w" sizes="(max-width: 535px) 100vw, 535px"><br><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/ruler-vert.png" alt="ruler-vert" width="23" height="480" class="alignnone wp-image-55" style="margin-top:0px"><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/castlevania-nt.png" alt="castlevania-nt" width="512" height="480" class="alignnone wp-image-46" style="margin-top:0px" srcset="http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-nt.png 512w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-nt-300x281.png 300w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-nt-500x469.png 500w" sizes="(max-width: 512px) 100vw, 512px"></p>
+<p>In this instance, the heart (at position $75) has a value of $13.</p>
+<p>Next, in order to add color, we need to select a palette.</p>
+<h1>PALETTE</h1>
+<p>The NES has a system palette of 64 colors <a href="#system-palette">[4]</a>, and from that you choose the palettes that are used for rendering. Each palette is 3 unique colors, plus the shared background color. An image has a maximum of 4 palettes, which takes up 16 bytes. Here is the palette for the Castlevania image:</p>
+<p><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/castlevania-pal.png" alt="castlevania-pal" width="168" height="24" class="alignnone size-medium wp-image-47"></p>
+<p>Palettes cannot be used with complete abandon. Rather, only a single one may be used per block. This is what typically gives a very “blocky” appearance to NES games, the need to separate each 16×16 region by color palette. Skillfully made graphics, such as this Castlevania intro, avoid this by blending shared colors at block edges, removing the appearance of the grid.</p>
+<p>Choosing which palette is used for each block is done using attributes, the final component.</p>
+<h1>ATTRIBUTES</h1>
+<p>Atributes are 2 bits for each block, and specify which of the 4 palettes to use. Here’s a picture showing which blocks uses which palette via its attributes: <a href="#attribute-encoding">[5]</a></p>
+<p style="line-height:0px;white-space:nowrap;"><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/ruler-horiz.png" alt="ruler-horiz" width="535" height="16" class="alignnone wp-image-54" srcset="http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz.png 535w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz-300x9.png 300w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/ruler-horiz-500x15.png 500w" sizes="(max-width: 535px) 100vw, 535px"><br><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/ruler-vert.png" alt="ruler-vert" width="23" height="480" class="alignnone wp-image-55" style="margin-top:0px"><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/castlevania-color.png" alt="castlevania-color" width="512" height="480" class="alignnone wp-image-44" style="margin-top:0px" srcset="http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-color.png 512w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-color-300x281.png 300w, http://www.dustmop.io/blog/wp-content/uploads/2015/04/castlevania-color-500x469.png 500w" sizes="(max-width: 512px) 100vw, 512px"></p>
+<p>As you may notice, the palettes are isolated into sections, but this fact is cleverly hidden by sharing colors between different areas. The reds in the middle part of the gate blend into the surrounding walls, and the black background blurs the line between the castle and the gate.</p>
+<p>At only 2 bits per block, or 4 blocks per byte, the attributes for an image use 240/4=60 bytes, though due to how they’re encoded they waste 4 bytes, using a total of 64. This means the total image, including the CHR, nametable, palette, and attributes, require 4096+960+16+64 = 5136 bytes, far better than the 30720 discussed above.</p>
+<h1>MAKECHR</h1>
+<p>Creating these four components for NES graphics is more complicated than typical bitmap APIs, but tools can help. Original NES developers probably had some sort of toolchains, but whatever they were, they have been lost to history. Nowadays, developers will typically create their own programs for converting graphics to what the NES needs.</p>
+<p>The images in this post were all created using <a href="http://github.com/dustmop/makechr">makechr</a>, a rewrite of the tool used to make <a href="http://starversus.com/">Star Versus</a>. It is a command-line tool designed for automated builds, and focuses on speed, good error messages, portability, and clarity. It also creates interesting visualizations such as those shown here.</p>
+<h1>REFERENCES</h1>
+<p>Most of my knowledge of how to program the NES, especially how to create graphics, was acquired by following these guides:</p>
+<ul>
+<li><a href="http://nintendoage.com/pub/faq/NA/nerdy_nights_out.html">Nintendo Age Nerdy Nights</a>
+</li><li><a href="http://wiki.nesdev.com/">NesDev’s wiki</a>
+</li></ul>
+<h1>FOOTNOTES</h1>
+<p><a name="terminology"></a>[1] Terminology – Some documents refer to blocks as “meta-tiles”, which personally I find less useful.</p>
+<p><a name="chr-encoding"></a>[2] CHR encoding – The 2 bits per pixel are not stored adjacently. Rather, the full image is stored with just the low bits, then stored again with just the high bits.</p>
+<p>So the heart would be stored like this:<br>
+<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/pixel-heart-low.png" alt="pixel-heart-low" width="128" height="128" class="alignnone size-full wp-image-52"> <img src="./NES Graphics – Part 1 _ dustmop.io blog_files/pixel-heart-high.png" alt="pixel-heart-high" width="128" height="128" class="alignnone size-full wp-image-51"><br>
+Each row is one byte. So 01100110 is $66, 01111111 is $7f. In total, the bytes for the heart are:<br>
+$66 $7f $ff $ff $ff $7e $3c $18 $66 $5f $bf $bf $ff $7e $3c $18</p>
+<p><a name="nametable-order"></a>[3] Nametable – This is not how the actual in-game graphics use the nametable. Typically, the alphabet will appear adjacently in memory, as is the case for how Castlevania really does it.</p>
+<p><a name="system-palette"></a>[4] System palette – The NES does not use an RGB palette, and the actual colors it renders may vary from tv to tv. Emulators tend to use completely different RGB palettes. The colors in this document match the hard-coded palette of makechr.</p>
+<p><a name="attribute-encoding"></a>[5] Attribute encoding – Attributes are stored in a strange order. Instead of going left to right, up to down, a 2×2 section of blocks will be encoded in a single byte, in a Z shaped ordering. This is the reason why there are 4 wasted bytes; the bottom row takes a full 8 bytes.</p>
+<p><img src="./NES Graphics – Part 1 _ dustmop.io blog_files/pal-block-group.png" alt="pal-block-group" width="64" height="64" class="alignnone size-medium wp-image-49"></p>
+<p>For example, the block at $308 is stored with $30a, $348, and $34a. Their palette values are 1, 2, 3, and 3, and are stored in low position to high position, or 11 :: 11 :: 10 :: 01 = 11111001. Therefore, the byte value for these attributes is $f9.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://www.dustmop.io/blog/category/nes/" rel="category tag">nes</a> and tagged <a href="http://www.dustmop.io/blog/tag/graphics/" rel="tag">graphics</a>, <a href="http://www.dustmop.io/blog/tag/makechr/" rel="tag">makechr</a>, <a href="http://www.dustmop.io/blog/tag/nes/" rel="tag">nes</a> by <a href="http://www.dustmop.io/blog/author/dustmop/">dustmop</a>. Bookmark the <a href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/" title="Permalink to NES Graphics – Part 1" rel="bookmark">permalink</a>.		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+			
+			
+<div id="comments">
+
+			<h2 id="comments-title">
+			6 thoughts on “<span>NES Graphics – Part 1</span>”		</h2>
+
+		
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-60">
+		<article id="comment-60" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/58c96acb2f3841bc5f3d9bc2bc60b188.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">teki</cite> on <a href="#comment-60"><time pubdate="" datetime="2015-04-28T19:38:04+00:00">April 28, 2015 at 7:38 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>4 years earlier Mattel had something similar in the Intellivision (but simpler obviously): <a href="http://wiki.intellivision.us/index.php?title=STIC" rel="nofollow">http://wiki.intellivision.us/index.php?title=STIC</a></p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/?replytocom=60#respond" onclick="return addComment.moveForm( &quot;comment-60&quot;, &quot;60&quot;, &quot;respond&quot;, &quot;56&quot; )" aria-label="Reply to teki">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-70">
+		<article id="comment-70" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/cf0db29ed4473ea7851e47a335396cf9.jpeg" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Mat Landers</cite> on <a href="#comment-70"><time pubdate="" datetime="2015-04-29T23:34:22+00:00">April 29, 2015 at 11:34 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Thanks for this article.  I really look forward to more NES related articles.  I am trying to teach myself how to make an NES game and this helps.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/?replytocom=70#respond" onclick="return addComment.moveForm( &quot;comment-70&quot;, &quot;70&quot;, &quot;respond&quot;, &quot;56&quot; )" aria-label="Reply to Mat Landers">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-79">
+		<article id="comment-79" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/f27dec1c76f138e27645c031d25df1ac.jpeg" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">techuck_</cite> on <a href="#comment-79"><time pubdate="" datetime="2015-05-01T13:07:55+00:00">May 1, 2015 at 1:07 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Great article, thanks for sharing!! Looking forward to part 2 <img draggable="false" class="emoji" alt="😀" src="./NES Graphics – Part 1 _ dustmop.io blog_files/1f600.svg"></p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/?replytocom=79#respond" onclick="return addComment.moveForm( &quot;comment-79&quot;, &quot;79&quot;, &quot;respond&quot;, &quot;56&quot; )" aria-label="Reply to techuck_">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-383">
+		<article id="comment-383" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/1bc42f2d2558ac91632b67be4dc998e6.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn"><a href="http://destinaxe.wordpress.com/" rel="external nofollow" class="url">Destinaxe</a></cite> on <a href="#comment-383"><time pubdate="" datetime="2015-07-05T10:37:13+00:00">July 5, 2015 at 10:37 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Great article! Very well written!</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/?replytocom=383#respond" onclick="return addComment.moveForm( &quot;comment-383&quot;, &quot;383&quot;, &quot;respond&quot;, &quot;56&quot; )" aria-label="Reply to Destinaxe">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1553">
+		<article id="comment-1553" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/2032eed53c57b90eeced515cb9cdc467.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Kaze_Senshi</cite> on <a href="#comment-1553"><time pubdate="" datetime="2015-12-20T07:37:28+00:00">December 20, 2015 at 7:37 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Cool article, I read this now and I am going to rest the others now. Happy Christmas man <img draggable="false" class="emoji" alt="🙂" src="./NES Graphics – Part 1 _ dustmop.io blog_files/1f642.svg"></p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/?replytocom=1553#respond" onclick="return addComment.moveForm( &quot;comment-1553&quot;, &quot;1553&quot;, &quot;respond&quot;, &quot;56&quot; )" aria-label="Reply to Kaze_Senshi">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2215">
+		<article id="comment-2215" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 1 _ dustmop.io blog_files/55c7eecd4967dad11a9ae7313a33ddd7.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">commentator</cite> on <a href="#comment-2215"><time pubdate="" datetime="2016-04-07T10:42:56+00:00">April 7, 2016 at 10:42 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>&gt;”An image has a maximum of 4 palettes, which takes up 16 bytes.”</p>
+<p>I think you meant to say background instead of image here.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/?replytocom=2215#respond" onclick="return addComment.moveForm( &quot;comment-2215&quot;, &quot;2215&quot;, &quot;respond&quot;, &quot;56&quot; )" aria-label="Reply to commentator">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://www.dustmop.io/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="56" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="34c7482731"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1654417188173"></form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		
+	</div><!-- #content -->
+</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+				<span class="sep"> | </span>
+				Theme: Duster by <a href="http://automattic.com/" rel="designer">Automattic</a>.			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="./NES Graphics – Part 1 _ dustmop.io blog_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./NES Graphics – Part 1 _ dustmop.io blog_files/wp-embed.min.js.download"></script>
+<script async="async" type="text/javascript" src="./NES Graphics – Part 1 _ dustmop.io blog_files/form.js.download"></script>
+
+
+</body></html>

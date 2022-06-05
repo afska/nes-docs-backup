@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/ -->
+<html lang="en-US"><input type="hidden" id="__yoroi_connector_api_injected_type" value="prod"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>NES Graphics – Part 3 | dustmop.io blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.dustmop.io/blog/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://www.dustmop.io/blog/wp-content/themes/duster/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="dustmop.io blog » Feed" href="http://www.dustmop.io/blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="dustmop.io blog » Comments Feed" href="http://www.dustmop.io/blog/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="dustmop.io blog » NES Graphics – Part 3 Comments Feed" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.dustmop.io\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.20"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./NES Graphics – Part 3 _ dustmop.io blog_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="duster-css" href="./NES Graphics – Part 3 _ dustmop.io blog_files/style.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="http://www.dustmop.io/blog/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.dustmop.io/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.dustmop.io/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Batsly Adams – Star Versus Production" href="http://www.dustmop.io/blog/2015/07/31/batsly-adams-star-versus-production/">
+<link rel="next" title="Lotus Text" href="http://www.dustmop.io/blog/2016/03/10/lotus-text/">
+<meta name="generator" content="WordPress 4.9.20">
+<link rel="shortlink" href="http://www.dustmop.io/blog/?p=169">
+<link rel="alternate" type="application/json+oembed" href="http://www.dustmop.io/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.dustmop.io%2Fblog%2F2015%2F12%2F18%2Fnes-graphics-part-3%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.dustmop.io/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.dustmop.io%2Fblog%2F2015%2F12%2F18%2Fnes-graphics-part-3%2F&amp;format=xml">
+
+<!-- Easy WP Meta Description -->
+<meta name="description" content="Guide to the NES graphics continued. Screen splits, pseudo parallax, bank switching.">
+<!-- /Easy WP Meta Description -->
+
+				<link rel="canonical" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-169 single-format-standard singular">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+<style>
+#top-ad {
+  padding-top: 10px;
+  text-align: center;
+  width: 728px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#searchform {
+  display: none;
+}
+</style>
+		<!--
+                        <div id="top-ad">
+<a href="http://starversus.com/" target="_blank"><img src="http://www.dustmop.io/blog/wp-content/uploads/2015/07/banner-ad-LEADERBOARD.png" width="728" height="90" class="alignnone" /></a>
+                        </div>
+-->
+
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://www.dustmop.io/blog/" title="dustmop.io blog" rel="home">dustmop.io blog</a></span></h1>
+				<h2 id="site-description"></h2>
+			</hgroup>
+
+			
+							<form method="get" id="searchform" action="http://www.dustmop.io/blog/">
+	<input type="text" class="field" name="s" id="s" placeholder="Search">
+	<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>
+			
+			<nav id="access" role="navigation">
+				<h1 class="section-heading">Main menu</h1>
+				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+				<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a href="http://dustmop.io/blog">Blog</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72"><a href="http://dustmop.io/">Main</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a href="http://starversus.com/">Star Versus</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+<div id="primary">
+	<div id="content" role="main">
+
+		
+			<nav id="nav-single">
+				<h1 class="section-heading">Post navigation</h1>
+				<span class="nav-previous"><a href="http://www.dustmop.io/blog/2015/07/31/batsly-adams-star-versus-production/" rel="prev">← Previous</a></span>
+				<span class="nav-next"><a href="http://www.dustmop.io/blog/2016/03/10/lotus-text/" rel="next">Next →</a></span>
+			</nav><!-- #nav-single -->
+
+			
+<article id="post-169" class="post-169 post type-post status-publish format-standard hentry category-nes tag-graphics tag-nes">
+	<header class="entry-header">
+		<h1 class="entry-title">NES Graphics – Part 3</h1>
+
+		<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/" rel="bookmark"><time class="entry-date" datetime="2015-12-18T14:00:31+00:00" pubdate="">December 18, 2015</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://www.dustmop.io/blog/author/dustmop/" title="View all posts by dustmop">dustmop</a></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><a href="http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/">Part 1</a> and <a href="http://www.dustmop.io/blog/2015/06/08/nes-graphics-part-2">part 2</a> described CHR data, nametable based backgrounds, sprites, and scrolling. Combined, these cover nearly everything a basic NES cart can do without using additional hardware. To go any further will require a quick tangent to discuss, in detail, how rendering happens.</p>
+<h1>RENDERING</h1>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/tv-rendering.gif" alt="tv-rendering" width="200" height="200" class="alignnone wp-image-176"><br><span class="note">Scanline based rendering, with a pause for vblank</span></p>
+<p>Like any older computer, the NES was designed to work with CRT TVs. They draw scanlines to the screen, one at a time, left to right, top to bottom, using an electron gun that physically moves to point at the screen where it draws these lines. Once the bottom corner is reached, a period called “vertical blank” (or vblank) happens, wherein the electron gun moves back to the top left to prepare to draw the next frame. On the NES, the PPU (Picture Processing Unit) does this scanline based rendering automatically, every frame, while code running in the CPU does whatever work the game needs to do. Vblank gives the software an opportunity to change data in the PPU’s memory, as otherwise that memory is being used for rendering. Most of the time, changes to the PPU’s nametable and palettes have to occur during this small window.</p>
+<p><span id="more-169"></span></p>
+<p>However, certain changes to the PPU’s state can be performed while the screen is being rendered, these are called “raster effects”. Most commonly, the scroll position can be assigned midscreen, creating one portion that stays static (like a HUD), while the rest scrolls ahead. Achieving this effect requires precisely timing when to change the scroll, so that it happens at the desired scanline. There are a number of techniques to perform this kind of synchronization between game code and the PPU.</p>
+<h1>SCREEN SPLITS</h1>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/ninja-gaiden-screenshot.png" alt="ninja-gaiden-screenshot" width="256" height="240" class="alignnone wp-image-172"><br><span class="note">HUD on top doesn’t move as the level scrolls</span></p>
+<p>First, the PPU has built-in hardware that treats the sprite at memory position zero specially. Whenever this sprite is rendered, if one of its pixels overlaps a visible part of the background, a bit called the “sprite0 flag” is set. Game code can first position this sprite where it wants a split to occur, then wait in a loop, checking for the sprite0 flag, so when this loop exits it knows exactly which scanline is currently being rendered. This is used by many NES games to make a simple screen split, like Ninja Gaiden (1989) shown here <a href="#nes-graphics-3-ninja-hud">[1]</a>.</p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/ninja-hud.png" alt="ninja-hud" width="256" height="240" class="alignnone wp-image-177"><br><span class="note">Sprite0 is at Y $26, and X $a0. When its bottom row of pixels is rendered, the sprite0 flag gets set</span></p>
+<p>Some games combine this sprite0 flag with another technique, that of a predictably timed loop, to wait for a certain number of additional lines to render, thus getting multiple splits on the screen. For example, Ninja Gaiden uses this in many of its cinematics to create dramatic effects, such as a windy grass field, or the sight of a distant castle. The game performs tasks like playing music and waiting for input at the start of the frame being rendered, then uses sprite0 to find the first split, and uses timed loops for the others.</p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/ninjas-in-field.gif" alt="ninjas-in-field" width="256" height="240" class="alignnone wp-image-180"></p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/castle-view.gif" alt="castle-view" width="256" height="240" class="alignnone wp-image-178"></p>
+<p>However, most games can’t afford to spend their time waiting in loops, especially during action scenes where CPU time is precious. For these cases, special hardware (called a mapper, because it uses its own memory mapping) is in the carts which can retrieve notifications when a certain scanline occurs <a href="#nes-graphics-3-scanline-counter">[2]</a> removing the need to have wait loops at all. The game code can do whatever task it wants, whenever it wants, resulting in better cpu utilization. Most later games which have a lot of screen splits use mappers this way.</p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/train-level.gif" alt="train-level" width="256" height="240" class="alignnone wp-image-179"></p>
+<p>Here is Ninja Gaiden 2 using a mapper to perform multiple splits, imitating parallax scrolling to create a sensation of great speed, even though the level itself is stationary. Notice that all of the different moving sections occupy strict horizontal bands; that is, none of the background layers overlap each other. This is a consequence of the fact that splits are made by changing the scroll at individual scanlines.</p>
+<h1>BANK SWITCHING</h1>
+<p>Mappers can perform many other functions, but by far the most common is bank switching. This is when an entire block of address spaces are reassigned to point to a different part of memory <a href="#nes-graphics-3-bank-switching">[3]</a>. Banking can be done to program code (allowing games to have lots of levels and music), but also with CHR data, instantaneously replacing the tiles that nametables or sprites refer to. Used between frames, this can animate an entire background all at once. But used as a raster effect, this lets different parts of the screen use completely different art. Ninja Gaiden games use this during gameplay, to render the hud separately from the level, and also during cinemas, keeping text and visual scenes in different CHR banks.</p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/goofall-bg.gif" alt="goofall-bg" width="256" height="240" class="alignnone wp-image-173"><br><span class="note">An animated background made using bank switching</span></p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/goofall-nt.png" alt="goofall-nt" width="256" height="240" class="alignnone wp-image-225"><br><span class="note">Repetition in the background, each section of nametable refers to the same pattern of tiles</span></p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/who-are-they-top-bank.png" alt="who-are-they-top-bank" width="256" height="240" class="alignnone wp-image-175"><br><span class="note">The top half of this cinematic uses one CHR bank. Sprites are used to render the eye, providing more colors</span></p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/who-are-they-bottom-bank.png" alt="who-are-they-bottom-bank" width="256" height="240" class="alignnone wp-image-174"><br><span class="note">The bottom half uses another CHR bank. The scroll also gets reset when banks are switched</span></p>
+<p>Bank switching can also be used for parallax scrolling, in a limited (albeit still impressive) form. If there’s a section of background made up of a short repetitive pattern, multiple banks can contain that same pattern, offset by a different amount. Then that pattern can be scrolled a certain amount by switching to the bank with the appropriate offset. This can even be used to parallax scroll with an overlapping background, by having tiles that aren’t affected by bank switching <a href="#nes-graphics-3-bank-granularity">[4]</a>. The downside is that a lot of CHR space needs to be used across all banks in total.</p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/metal-storm-bg.gif" alt="metal-storm-bg" width="256" height="232" class="alignnone wp-image-171"><br><span class="note">Metal Storm (1991) using bank switching for layered scrolling</span></p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/metal-storm-nt.png" alt="metal-storm-nt" width="256" height="232" class="alignnone wp-image-224"><br><span class="note">Repetition in the nametable allows for this layered effect</span></p>
+<p>Bank switching CHR is a very powerful tool, but still has limitations. Although it’s useful for animating an entire screen, it isn’t that great at changing a small part of the screen at a time; for that nametable changes are needed. Also, the amount of CHR a cart can have is limited, and data needs to pre-exist before it can be banked to. Finally, aside from scrolling-based raster effects, the strict grid of nametables is always in effect, limiting the dynamic range of graphical effects.</p>
+<h1>MORE EXAMPLES</h1>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/vice-fire.gif" alt="vice-fire" width="256" height="240" class="alignnone wp-image-220"></p>
+<p>Vice: Project Doom (1991) makes this flame effect by continually setting the scroll position at each scanline. The character in front is made using sprites, which aren’t affected by the scroll.</p>
+<p><img src="./NES Graphics – Part 3 _ dustmop.io blog_files/sword-master.gif" alt="sword-master" width="256" height="240" class="alignnone wp-image-206"></p>
+<p>Sword Master (1990) uses bank switching to scroll the distant mountains, and screen splits for the HUD and foreground grass.</p>
+<h1>ACKNOWLEDGEMENTS</h1>
+<p>It wouldn’t have been possible to generate these graphics without the powerful debugging features provided by the emulator FCEUX. Also, the nesdev wiki once again was a great resource for understanding how sprite0 works:</p>
+<ul>
+<li><a href="http://www.fceux.com/">FCEUX</a></li>
+<li><a href="http://wiki.nesdev.com/">NesDev’s wiki</a></li>
+</ul>
+<h1>FOOTNOTES</h1>
+<p><a name="nes-graphics-3-ninja-hud"></a>[1] The situation for Ninja Gaiden is actually slightly more complicated. It uses 8×16 sprites, a special mode offered by the PPU, which renders sprites as vertically stacked pairs. So sprite0 is fully transparent, and sprite1 has the line of pixels at the bottom. It also sets the z-layer of these sprites so that they are rendered behind the blackness of the HUD, leaving nothing visible.</p>
+<p><a name="nes-graphics-3-scanline-counter"></a>[2] The way this works is pretty clever. Game code writes a desired scanline to the mapper’s address space. Then the mapper intercepts the PPU’s memory accesses, counting whenever it notes a new scanline is being rendered. When the target scanline is reached, it generates a hardware interrupt (an IRQ), wherein game code runs, doing whatever tasks it wants to do at that scanline.</p>
+<p><a name="nes-graphics-3-bank-switching"></a>[3] Banking is accomplished by hardware memory-mapping, intercepting memory accesses and overridding the physical location that gets retrieved. As a result it is instantaneous, but also has high granularity, typically affecting an address range of 4KB or 8KB.</p>
+<p><a name="nes-graphics-3-bank-granularity"></a>[4] The only way to bank CHR without affecting every tile is to either have tile data duplicated between banks, or have a mapper with a finer granularity. With such a mapper, a smaller part of a bank, perhaps only 1KB at a time, can be banked while the rest stays the same.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://www.dustmop.io/blog/category/nes/" rel="category tag">nes</a> and tagged <a href="http://www.dustmop.io/blog/tag/graphics/" rel="tag">graphics</a>, <a href="http://www.dustmop.io/blog/tag/nes/" rel="tag">nes</a> by <a href="http://www.dustmop.io/blog/author/dustmop/">dustmop</a>. Bookmark the <a href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/" title="Permalink to NES Graphics – Part 3" rel="bookmark">permalink</a>.		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+			
+			
+<div id="comments">
+
+			<h2 id="comments-title">
+			12 thoughts on “<span>NES Graphics – Part 3</span>”		</h2>
+
+		
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-1544">
+		<article id="comment-1544" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/52132ff8e5e6b045d86769affc4b3f2a.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Cyttorak</cite> on <a href="#comment-1544"><time pubdate="" datetime="2015-12-19T06:42:39+00:00">December 19, 2015 at 6:42 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Thanks for these series! Would it be possible to do something similar but with Sega Master System? Even in a resumed form, as it shares several details with the NES <img draggable="false" class="emoji" alt="😉" src="./NES Graphics – Part 3 _ dustmop.io blog_files/1f609.svg"></p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1544#respond" onclick="return addComment.moveForm( &quot;comment-1544&quot;, &quot;1544&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Cyttorak">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-dustmop bypostauthor odd alt depth-2" id="li-comment-1545">
+		<article id="comment-1545" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/dustmop-avatar-large-150x150.png" width="39" height="39" alt="dustmop" class="avatar avatar-39 wp-user-avatar wp-user-avatar-39 alignnone photo"><cite class="fn"><a href="http://dustmop.io/" rel="external nofollow" class="url">dustmop</a></cite> on <a href="#comment-1545"><time pubdate="" datetime="2015-12-19T14:56:56+00:00">December 19, 2015 at 2:56 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Personally, I have zero knowledge of the Master System, whereas I’ve made NES homebrew already. However, it’s definitely something I’m interested in and would like to look into!</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1545#respond" onclick="return addComment.moveForm( &quot;comment-1545&quot;, &quot;1545&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to dustmop">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even depth-2" id="li-comment-1558">
+		<article id="comment-1558" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/6636eb328ce1eb8e5f200459f60298ad.png" width="39" height="39" alt="Avatar" class="avatar avatar-39wp-user-avatar wp-user-avatar-39 alignnone photo avatar-default"><cite class="fn">Blargh</cite> on <a href="#comment-1558"><time pubdate="" datetime="2015-12-21T10:45:08+00:00">December 21, 2015 at 10:45 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>The SMS, just like the majority of computer and consoles of the 80s, also has tile/character-based graphic modes, together with horizontal and vertical smooth scrolling.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1558#respond" onclick="return addComment.moveForm( &quot;comment-1558&quot;, &quot;1558&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Blargh">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1557">
+		<article id="comment-1557" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/b928accd038cf24ef3f14cb5dd758b04.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Nicolas</cite> on <a href="#comment-1557"><time pubdate="" datetime="2015-12-21T09:34:34+00:00">December 21, 2015 at 9:34 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Nice article !</p>
+<p>Just a detail: “an electron gun that physically moves” is not quite right, the electron gun does not move. There are coils around the opening of the electron gun that create a variable magnetic field to deflect electrons in the right direction.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1557#respond" onclick="return addComment.moveForm( &quot;comment-1557&quot;, &quot;1557&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Nicolas">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1559">
+		<article id="comment-1559" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/4c8e8a4fc988d01e7b5a070bb71fbe72.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Thomas</cite> on <a href="#comment-1559"><time pubdate="" datetime="2015-12-21T11:10:22+00:00">December 21, 2015 at 11:10 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Kirby’s Adventure had a unique use of bankswitching which I thought was cool. It’s actually a very good game and it’s quite impressive because it was released in 1993 so developers had managed to figure out nearly every trick in the book. They used bankswitching to emulate the mosaic effect that the SNES hardware was natively capable of (<a href="http://youtube.com/watch?v=znn-w57UAoI" rel="nofollow">http://youtube.com/watch?v=znn-w57UAoI</a>).</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1559#respond" onclick="return addComment.moveForm( &quot;comment-1559&quot;, &quot;1559&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Thomas">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1563">
+		<article id="comment-1563" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/8d9aba79be37c3e972c9d572ee7dc66b.jpeg" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn"><a href="https://franciskim.co/" rel="external nofollow" class="url">Francis Kim</a></cite> on <a href="#comment-1563"><time pubdate="" datetime="2015-12-21T21:16:48+00:00">December 21, 2015 at 9:16 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Such a cool article!! Feels like I lived long enough to see technology do full circle <img draggable="false" class="emoji" alt="🙂" src="./NES Graphics – Part 3 _ dustmop.io blog_files/1f642.svg"></p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1563#respond" onclick="return addComment.moveForm( &quot;comment-1563&quot;, &quot;1563&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Francis Kim">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1607">
+		<article id="comment-1607" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/75bfaeb4425289e2c8dcd947222a2ecd.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Andrew de los Reyes</cite> on <a href="#comment-1607"><time pubdate="" datetime="2015-12-24T20:21:47+00:00">December 24, 2015 at 8:21 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Awesome series. Very informative and really well written.</p>
+<p>I’m curious about how the graphics worked in racing games like Mario Kart, for example. Looking at a screenshot ( <a href="http://images.nintendolife.com/screenshots/16705/large.jpg" rel="nofollow">http://images.nintendolife.com/screenshots/16705/large.jpg</a> ) it’s hard to see how this could be done. It looks like there are more than 8 sprites per scanline, for one thing. Also, on some levels, the background is layered/composited and different layers move at different speeds, so it wouldn’t be the smooth scrolling trick you mentioned here.</p>
+<p>Thanks again for these articles!</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1607#respond" onclick="return addComment.moveForm( &quot;comment-1607&quot;, &quot;1607&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Andrew de los Reyes">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-dustmop bypostauthor odd alt depth-2" id="li-comment-1608">
+		<article id="comment-1608" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/dustmop-avatar-large-150x150.png" width="39" height="39" alt="dustmop" class="avatar avatar-39 wp-user-avatar wp-user-avatar-39 alignnone photo"><cite class="fn"><a href="http://dustmop.io/" rel="external nofollow" class="url">dustmop</a></cite> on <a href="#comment-1608"><time pubdate="" datetime="2015-12-24T23:16:30+00:00">December 24, 2015 at 11:16 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Mario Kart is on the Super NES, which has massively expanded capabilities. It no longer has the 8 sprite per scanline limit, and has a special graphics mode called Mode 7 that allows it to scale, stretch, and rotate the background layer. Beyond that, my knowledge of the SNES is pretty limited, but it’s something I plan to learn more about in the future.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1608#respond" onclick="return addComment.moveForm( &quot;comment-1608&quot;, &quot;1608&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to dustmop">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment even depth-3" id="li-comment-1609">
+		<article id="comment-1609" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/75bfaeb4425289e2c8dcd947222a2ecd(1).png" width="39" height="39" alt="Avatar" class="avatar avatar-39wp-user-avatar wp-user-avatar-39 alignnone photo avatar-default"><cite class="fn">Andrew de los Reyes</cite> on <a href="#comment-1609"><time pubdate="" datetime="2015-12-24T23:53:40+00:00">December 24, 2015 at 11:53 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Haha, I feel like a fool! Somehow I thought that was NES.</p>
+<p>Thanks for the quick reply <img draggable="false" class="emoji" alt="🙂" src="./NES Graphics – Part 3 _ dustmop.io blog_files/1f642.svg"></p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1609#respond" onclick="return addComment.moveForm( &quot;comment-1609&quot;, &quot;1609&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Andrew de los Reyes">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-dustmop bypostauthor odd alt depth-4" id="li-comment-1623">
+		<article id="comment-1623" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/dustmop-avatar-large-150x150.png" width="39" height="39" alt="dustmop" class="avatar avatar-39 wp-user-avatar wp-user-avatar-39 alignnone photo"><cite class="fn"><a href="http://dustmop.io/" rel="external nofollow" class="url">dustmop</a></cite> on <a href="#comment-1623"><time pubdate="" datetime="2015-12-26T15:05:48+00:00">December 26, 2015 at 3:05 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>It’s okay, we all make mistakes. An earlier commenter even pointed out a mistake I made in this very post. Thanks for the ask!</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=1623#respond" onclick="return addComment.moveForm( &quot;comment-1623&quot;, &quot;1623&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to dustmop">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-2507">
+		<article id="comment-2507" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/1b7a8470b396795db36beb54cf816db1.jpeg" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn"><a href="http://youtube.com/onebeartoe" rel="external nofollow" class="url">Roberto Marquez</a></cite> on <a href="#comment-2507"><time pubdate="" datetime="2016-07-13T13:43:50+00:00">July 13, 2016 at 1:43 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>Thanks for posting.  Seeing the Nija Gaiden images brought back some good memories.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=2507#respond" onclick="return addComment.moveForm( &quot;comment-2507&quot;, &quot;2507&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Roberto Marquez">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-3168">
+		<article id="comment-3168" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img src="./NES Graphics – Part 3 _ dustmop.io blog_files/87b06dd58cfc480b6c91f3f43b082b97.png" width="68" height="68" alt="Avatar" class="avatar avatar-68wp-user-avatar wp-user-avatar-68 alignnone photo avatar-default"><cite class="fn">Lauren</cite> on <a href="#comment-3168"><time pubdate="" datetime="2017-06-19T23:22:16+00:00">June 19, 2017 at 11:22 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</footer>
+
+			<div class="comment-content"><p>I love this blog. Thanks for writing it. The entry on palette usage on the menu in Star Versus remains one of my favorites, as well as this series.</p>
+</div>
+
+			<div class="reply">
+				<a rel="nofollow" class="comment-reply-link" href="http://www.dustmop.io/blog/2015/12/18/nes-graphics-part-3/?replytocom=3168#respond" onclick="return addComment.moveForm( &quot;comment-3168&quot;, &quot;3168&quot;, &quot;respond&quot;, &quot;169&quot; )" aria-label="Reply to Lauren">Reply ↓</a>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://www.dustmop.io/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="169" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d271bd43b6"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1654417413041"></form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		
+	</div><!-- #content -->
+</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+			<div id="site-generator">
+								<a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+				<span class="sep"> | </span>
+				Theme: Duster by <a href="http://automattic.com/" rel="designer">Automattic</a>.			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="./NES Graphics – Part 3 _ dustmop.io blog_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./NES Graphics – Part 3 _ dustmop.io blog_files/wp-embed.min.js.download"></script>
+<script async="async" type="text/javascript" src="./NES Graphics – Part 3 _ dustmop.io blog_files/form.js.download"></script>
+
+
+</body></html>
